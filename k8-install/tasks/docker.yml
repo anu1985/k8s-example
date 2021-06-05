@@ -1,0 +1,11 @@
+---
+  - name: Install docker and its dependecies
+    yum: 
+      name: "{{ packages }}"
+      state: present
+      update_cache: yes
+    vars:
+      packages:
+      - docker 
+   # notify:
+    #  - docker status
